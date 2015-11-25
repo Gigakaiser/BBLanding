@@ -45,6 +45,7 @@ body
 	display:table-cell;
 	height:100%;  
 	padding-bottom: 100px;
+		transition: all 0.3s ease 0s;
 }
 .text-center
 {
@@ -59,6 +60,7 @@ body
 	@media screen and (min-width: 481px) {
 			font-size: 36px;
 	}
+	transition: all 0.3s ease 0s;
 }
 .navbar ul
 {
@@ -77,11 +79,13 @@ body
 	border: solid 2px #0A4D6D;
 	border-radius: 0px !important;
 	font-family: 'Cabin', sans-serif ;
+	
 }
 .form-control
 {
 	border-top-left-radius: 0px !important;
 	border-bottom-left-radius: 0px !important;
+	
 }
 
 .btn ,.btn:focus, .btn.focus
@@ -92,6 +96,7 @@ body
 	color:white;
 	transition: all 0.3s ease 0s;
 	font-family: 'Cabin', sans-serif ;
+
 }
 .btn:hover
 {
