@@ -21,6 +21,12 @@ module Landing3
     config.assets.enabled = true
     # Version of your assets, change this if you want to expire all your assets
     config.assets.version = '1.0'
+    config.assets.precompile += [
+      'application.css.scss'
+    ]
+     config.assets.precompile += [
+      'pages.css.scss'
+    ]
     # The default locale is :en and all translations from config/locales/*.rb,yml are auto loaded.
     # config.i18n.load_path += Dir[Rails.root.join('my', 'locales', '*.{rb,yml}').to_s]
     # config.i18n.default_locale = :de
