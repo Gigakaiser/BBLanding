@@ -1,0 +1,11 @@
+<!DOCTYPE html>
+<div class = "container">
+<h2>USER:</h2> <h2><%= @user.email %></h2>
+<h2>REFERRALS:</h2> 
+<h2><%= @refcount %></h2> 
+	<% @userrefs.each do |t|%>
+	<h2>
+	<%= t.email %>
+	</h2>
+	<%end%>
+</div>
