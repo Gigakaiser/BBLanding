@@ -3,21 +3,21 @@ class UsersController < ApplicationController
 		session[:refid] = "NA"
 		@referrer = nil
 		@newuser = User.new
-
 	end
+
 	def referral_signup
 
 	if User.where(:userid => session[:refid]).blank?
 		redirect_to '/'
 		flash[:notice] = "Bad rererrer link"
 	else
-
 		session[:refid] = params[:userid]
 		@referrer = User.where(userid: params[:userid]).first
 		@newuser = User.new
 		render 'home'
 	end
 	end
+
 	def create
 		 @user = User.new(user_params)
 		 @user.userid = SecureRandom.uuid
@@ -27,10 +27,9 @@ class UsersController < ApplicationController
     else
         redirect_to "/"
          flash[:notice] = "Email already registered!"
-      
 	end
-	
 	end
+
 	def update
 			redirect_to '/'
 	end
@@ -38,7 +37,7 @@ class UsersController < ApplicationController
 	def index
 		@users = User.all
 	end
-	def show
+	def showstats
 		@user = User.where(userid: params[:userid]).first
 		@userrefs = User.where(referrerid: params[:userid])
 		@refcount = @userrefs.length;
