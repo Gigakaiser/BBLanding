@@ -42,11 +42,7 @@ class UsersController < ApplicationController
 		@user = User.where(userid: params[:userid]).first
 		@userrefs = User.where(referrerid: params[:userid])
 		@reflink = URI.join(root_url,@user.userid)
-		
 		@refcount = @userrefs.length
-		@refcount = 10
-
-
 		startfill = 10
 		goal1 = 5
 		goal2 = 10
