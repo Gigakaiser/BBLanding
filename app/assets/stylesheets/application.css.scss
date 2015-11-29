@@ -40,6 +40,13 @@ body
 {
 	/*background: yellow;*/
 	display:table-row;
+
+}
+
+.thankyou
+{
+		color:white;
+	background-color:#0A4D6D;
 }
 .sec
 {
@@ -122,10 +129,12 @@ body
 {
 	border: solid 2px #0A4D6D;
 	border-radius: 0px;
+	height:30px;
 }
 
 .progress-bar
 {
+
 
 	background-color: orange;
 	transition: all 0.3s ease 0s;
@@ -134,10 +143,106 @@ body
 }
 .progress-bar:hover
 {
-
 	background-color: lightgreen;
 	transition: all 1.0s ease 0s;
 	border-radius: 0px;
+}
+.grad
+{
+	/*background: url(/assets/grad.jpg) 0 0 no-repeat;*/
+
+}
+.share-wrap
+{
+
+	text-align: center;
+	text-transform: uppercase;
+	margins:auto;
+	overflow:hidden;
+	display:inline-block !important;
 	
 
 }
+
+.why{	
+
+font-size: 16px;
+	color: #555556;
+	font-weight: bold;
+	margin-top: 42px;
+
+}
+
+.share-wrap .title{
+	font-size: 30px;
+	line-height: 40px;
+	text-transform: uppercase;
+	font-weight: bold;
+	color: #074E6F;
+	margin-top: 18px;
+}
+
+.share-wrap .subtitle{
+	color: #565656;
+	font-size: 14px;
+	text-transform: none;
+	margin-top: 15px;
+}
+
+.share-wrap .copy-link{
+	border: 1px solid #D1D0C7;
+	background: #FFF;
+	padding: 10px 0;
+	width: 320px;
+	text-transform: none;
+	font-size: 14px;
+	margin: 20px auto 0;
+}
+
+
+.prizes
+{
+	width: 100%;
+	color:#0A4D6D;
+
+}
+
+.prize
+{
+	text-align:center;
+	vertical-align: top;
+	font-size: 12px;
+	text-transform: uppercase;
+	font-weight: bold;
+	width:10%;
+	display: inline-block; 
+	padding: 0; 
+	margin: 0;  
+
+}
+.BBdescription
+{
+	display: inline-block; 
+
+
+}
+.BBdescription .text-center
+{
+	font-family: 'Cabin', sans-serif;
+	padding-bottom: 45px;
+	padding-top: 45px;
+	font-size: 24px;
+	
+	@media screen and (max-width: 480px) {
+			font-size: 20px;
+	}	
+	@media screen and (min-width: 481px) {
+			font-size: 24px;
+	}
+	transition: all 0.3s ease 0s;
+}
+#descript{left: 20%;text-align:left;}
+#first{left: 20%;margin-left:13.5%}
+#second{ left: 40%;margin-left:10.5%}
+#third{left: 60%;margin-left:10%}
+#fourth{left: 80%;margin-left:10%}
