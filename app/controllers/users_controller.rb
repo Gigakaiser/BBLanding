@@ -41,9 +41,40 @@ class UsersController < ApplicationController
 	def showstats
 		@user = User.where(userid: params[:userid]).first
 		@userrefs = User.where(referrerid: params[:userid])
-		@refcount = @userrefs.length;
-		@percentage = ((@refcount/50.0)*100)
 		@reflink = URI.join(root_url,@user.userid)
+		
+		@refcount = @userrefs.length
+		@refcount = 10
+
+
+		startfill = 10
+		goal1 = 5
+		goal2 = 10
+		goal3 = 25
+		goal4 = 50
+
+		mark1 = 29.0
+		mark2 = 50.0
+		mark3 = 70.5
+		mark4 = 92.3
+
+		if @refcount <= goal1
+			@percentage = startfill + (@refcount * (mark1-startfill)/(goal1-0))
+		
+		elsif @refcount <= goal2
+			@percentage = mark1 + ((@refcount-goal1) * (mark2-mark1)/(goal2-goal1))
+		
+		elsif @refcount <= goal3
+			@percentage = mark2 + ((@refcount-goal2) * (mark3-mark2)/(goal3-goal2))
+		
+		elsif @refcount <= goal4-1
+			@percentage = mark3 + ((@refcount-goal3) * (mark4-mark3)/(goal4-goal3))
+		elsif @refcount >= goal4
+			@percentage = 100
+		
+	end
+		#@percentage = ((six/50.0)*100)
+		
 		render 'showstats'
 	end
 	def user_params
