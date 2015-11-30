@@ -30,7 +30,7 @@ class UsersController < ApplicationController
         flash[:notice] = "Error!" 
     else
     	@olduser =  User.where(:email => @user.email).first
-    		  redirect_to "/tracker/#{@olduser.userid}"
+    	redirect_to "/tracker/#{@olduser.userid}"
     		
     	
     end
