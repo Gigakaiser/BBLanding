@@ -25,10 +25,17 @@ class UsersController < ApplicationController
 		 @user.referrerid=session[:refid]
     if @user.save
       redirect_to "/tracker/#{@user.userid}"
+    elsif User.where(:email => @user.email).first.blank?
+	     redirect_to "/"
+        flash[:notice] = "Error!" 
     else
-        redirect_to "/"
-         flash[:notice] = "Email already registered!"
-	end
+    	@olduser =  User.where(:email => @user.email).first
+    		  redirect_to "/tracker/#{@olduser.userid}"
+    		
+    	
+    end
+        
+	
 	end
 
 	def update
